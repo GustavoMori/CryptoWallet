@@ -1,0 +1,207 @@
+I, [2019-12-26T16:13:39.229261 #19336]  INFO -- : [170203aa-8f52-4eac-b881-4fc85255fb72] Started GET "/" for 10.0.2.2 at 2019-12-26 16:13:39 +0000
+F, [2019-12-26T16:13:39.229973 #19336] FATAL -- : [170203aa-8f52-4eac-b881-4fc85255fb72]   
+F, [2019-12-26T16:13:39.230112 #19336] FATAL -- : [170203aa-8f52-4eac-b881-4fc85255fb72] ActionController::RoutingError (No route matches [GET] "/"):
+F, [2019-12-26T16:13:39.230254 #19336] FATAL -- : [170203aa-8f52-4eac-b881-4fc85255fb72]   
+F, [2019-12-26T16:13:39.230363 #19336] FATAL -- : [170203aa-8f52-4eac-b881-4fc85255fb72] actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+[170203aa-8f52-4eac-b881-4fc85255fb72] actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[170203aa-8f52-4eac-b881-4fc85255fb72] railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+[170203aa-8f52-4eac-b881-4fc85255fb72] railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+[170203aa-8f52-4eac-b881-4fc85255fb72] activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+[170203aa-8f52-4eac-b881-4fc85255fb72] activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+[170203aa-8f52-4eac-b881-4fc85255fb72] activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+[170203aa-8f52-4eac-b881-4fc85255fb72] railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+[170203aa-8f52-4eac-b881-4fc85255fb72] actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[170203aa-8f52-4eac-b881-4fc85255fb72] actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[170203aa-8f52-4eac-b881-4fc85255fb72] rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+[170203aa-8f52-4eac-b881-4fc85255fb72] rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+[170203aa-8f52-4eac-b881-4fc85255fb72] activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[170203aa-8f52-4eac-b881-4fc85255fb72] actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+[170203aa-8f52-4eac-b881-4fc85255fb72] rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+[170203aa-8f52-4eac-b881-4fc85255fb72] railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+[170203aa-8f52-4eac-b881-4fc85255fb72] puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+[170203aa-8f52-4eac-b881-4fc85255fb72] puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+[170203aa-8f52-4eac-b881-4fc85255fb72] puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+[170203aa-8f52-4eac-b881-4fc85255fb72] puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+[170203aa-8f52-4eac-b881-4fc85255fb72] puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+D, [2020-01-23T20:45:11.681730 #13913] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+D, [2020-01-23T20:45:11.683918 #13913] DEBUG -- :   [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+D, [2020-01-23T20:45:11.687467 #13913] DEBUG -- :   [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+D, [2020-01-23T20:45:11.696421 #13913] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+I, [2020-01-23T20:45:11.696567 #13913]  INFO -- : Migrating to CreateCoins (20191225171913)
+D, [2020-01-23T20:45:11.699403 #13913] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+D, [2020-01-23T20:45:11.701516 #13913] DEBUG -- :   [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "coins" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar, "acronym" varchar, "url_image" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+D, [2020-01-23T20:45:11.704386 #13913] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191225171913"]]
+D, [2020-01-23T20:45:11.705685 #13913] DEBUG -- :   [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+I, [2020-01-23T20:45:11.705797 #13913]  INFO -- : Migrating to CreateMiningTypes (20200116130626)
+D, [2020-01-23T20:45:11.707214 #13913] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+D, [2020-01-23T20:45:11.709218 #13913] DEBUG -- :   [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "mining_types" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar, "acronym" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+D, [2020-01-23T20:45:11.710580 #13913] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200116130626"]]
+D, [2020-01-23T20:45:11.711896 #13913] DEBUG -- :   [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+I, [2020-01-23T20:45:11.712009 #13913]  INFO -- : Migrating to AddMiningTypeToCoins (20200116132105)
+D, [2020-01-23T20:45:11.713546 #13913] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+D, [2020-01-23T20:45:11.715290 #13913] DEBUG -- :   [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "coins" ADD "mining_type_id" integer[0m
+D, [2020-01-23T20:45:11.715814 #13913] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_coins_on_mining_type_id" ON "coins" ("mining_type_id")[0m
+D, [2020-01-23T20:45:11.717280 #13913] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200116132105"]]
+D, [2020-01-23T20:45:11.718449 #13913] DEBUG -- :   [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+D, [2020-01-23T20:45:11.721265 #13913] DEBUG -- :   [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+D, [2020-01-23T20:45:11.724966 #13913] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+D, [2020-01-23T20:45:11.726831 #13913] DEBUG -- :   [1m[36mActiveRecord::InternalMetadata Create (1.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "production"], ["created_at", "2020-01-23 20:45:11.725223"], ["updated_at", "2020-01-23 20:45:11.725223"]]
+D, [2020-01-23T20:45:11.728035 #13913] DEBUG -- :   [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+I, [2020-01-23T20:45:47.758573 #13919]  INFO -- : [7050d463-9e0c-4728-81f8-de6385f7f416] Started GET "/" for 10.0.2.2 at 2020-01-23 20:45:47 +0000
+I, [2020-01-23T20:45:47.759638 #13919]  INFO -- : [7050d463-9e0c-4728-81f8-de6385f7f416] Processing by WelcomeController#index as HTML
+I, [2020-01-23T20:45:47.784267 #13919]  INFO -- : [7050d463-9e0c-4728-81f8-de6385f7f416]   Rendering welcome/index.html.erb within layouts/application
+I, [2020-01-23T20:45:47.926135 #13919]  INFO -- : [7050d463-9e0c-4728-81f8-de6385f7f416]   Rendered welcome/_menu.html.erb (0.5ms)
+I, [2020-01-23T20:45:47.935572 #13919]  INFO -- : [7050d463-9e0c-4728-81f8-de6385f7f416]   Rendered welcome/index.html.erb within layouts/application (151.1ms)
+I, [2020-01-23T20:45:47.935857 #13919]  INFO -- : [7050d463-9e0c-4728-81f8-de6385f7f416] Completed 500 Internal Server Error in 176ms
+F, [2020-01-23T20:45:47.936929 #13919] FATAL -- : [7050d463-9e0c-4728-81f8-de6385f7f416]   
+F, [2020-01-23T20:45:47.937074 #13919] FATAL -- : [7050d463-9e0c-4728-81f8-de6385f7f416] ActionView::Template::Error (uninitialized constant ApplicationHelper::Rail
+Did you mean?  Rails):
+F, [2020-01-23T20:45:47.937343 #13919] FATAL -- : [7050d463-9e0c-4728-81f8-de6385f7f416]      9:     
+[7050d463-9e0c-4728-81f8-de6385f7f416]     10: <%= render "menu" %>
+[7050d463-9e0c-4728-81f8-de6385f7f416]     11: <p>
+[7050d463-9e0c-4728-81f8-de6385f7f416]     12:     Você está em ambiente de <strong><%= ambiente_rails %></strong>
+[7050d463-9e0c-4728-81f8-de6385f7f416]     13: </p>
+[7050d463-9e0c-4728-81f8-de6385f7f416]     14: <p> 
+[7050d463-9e0c-4728-81f8-de6385f7f416]     15:     Eu sou uma variável de instância/sessão <strong><%= @meu_nome %>
+F, [2020-01-23T20:45:47.937549 #13919] FATAL -- : [7050d463-9e0c-4728-81f8-de6385f7f416]   
+F, [2020-01-23T20:45:47.937713 #13919] FATAL -- : [7050d463-9e0c-4728-81f8-de6385f7f416] app/helpers/application_helper.rb:19:in `ambiente_rails'
+[7050d463-9e0c-4728-81f8-de6385f7f416] app/views/welcome/index.html.erb:12:in `_app_views_welcome_index_html_erb___4469775233148591134_47059512160980'
+I, [2020-01-23T20:46:14.575858 #13919]  INFO -- : [c82ad000-bb8f-466c-9685-b7358e3c67b6] Started GET "/" for 10.0.2.2 at 2020-01-23 20:46:14 +0000
+I, [2020-01-23T20:46:14.576683 #13919]  INFO -- : [c82ad000-bb8f-466c-9685-b7358e3c67b6] Processing by WelcomeController#index as HTML
+I, [2020-01-23T20:46:14.578122 #13919]  INFO -- : [c82ad000-bb8f-466c-9685-b7358e3c67b6]   Rendering welcome/index.html.erb within layouts/application
+I, [2020-01-23T20:46:14.579031 #13919]  INFO -- : [c82ad000-bb8f-466c-9685-b7358e3c67b6]   Rendered welcome/_menu.html.erb (0.2ms)
+I, [2020-01-23T20:46:14.590485 #13919]  INFO -- : [c82ad000-bb8f-466c-9685-b7358e3c67b6]   Rendered welcome/index.html.erb within layouts/application (12.0ms)
+I, [2020-01-23T20:46:14.590765 #13919]  INFO -- : [c82ad000-bb8f-466c-9685-b7358e3c67b6] Completed 500 Internal Server Error in 14ms
+F, [2020-01-23T20:46:14.591902 #13919] FATAL -- : [c82ad000-bb8f-466c-9685-b7358e3c67b6]   
+F, [2020-01-23T20:46:14.592070 #13919] FATAL -- : [c82ad000-bb8f-466c-9685-b7358e3c67b6] ActionView::Template::Error (uninitialized constant ApplicationHelper::Rail
+Did you mean?  Rails):
+F, [2020-01-23T20:46:14.592340 #13919] FATAL -- : [c82ad000-bb8f-466c-9685-b7358e3c67b6]      9:     
+[c82ad000-bb8f-466c-9685-b7358e3c67b6]     10: <%= render "menu" %>
+[c82ad000-bb8f-466c-9685-b7358e3c67b6]     11: <p>
+[c82ad000-bb8f-466c-9685-b7358e3c67b6]     12:     Você está em ambiente de <strong><%= ambiente_rails %></strong>
+[c82ad000-bb8f-466c-9685-b7358e3c67b6]     13: </p>
+[c82ad000-bb8f-466c-9685-b7358e3c67b6]     14: <p> 
+[c82ad000-bb8f-466c-9685-b7358e3c67b6]     15:     Eu sou uma variável de instância/sessão <strong><%= @meu_nome %>
+F, [2020-01-23T20:46:14.592513 #13919] FATAL -- : [c82ad000-bb8f-466c-9685-b7358e3c67b6]   
+F, [2020-01-23T20:46:14.592685 #13919] FATAL -- : [c82ad000-bb8f-466c-9685-b7358e3c67b6] app/helpers/application_helper.rb:19:in `ambiente_rails'
+[c82ad000-bb8f-466c-9685-b7358e3c67b6] app/views/welcome/index.html.erb:12:in `_app_views_welcome_index_html_erb___4469775233148591134_47059512160980'
+I, [2020-01-23T20:46:14.649591 #13919]  INFO -- : [ce0d8929-98b3-41fe-840c-fa496e919e49] Started GET "/favicon.ico" for 10.0.2.2 at 2020-01-23 20:46:14 +0000
+F, [2020-01-23T20:46:14.650353 #13919] FATAL -- : [ce0d8929-98b3-41fe-840c-fa496e919e49]   
+F, [2020-01-23T20:46:14.650513 #13919] FATAL -- : [ce0d8929-98b3-41fe-840c-fa496e919e49] ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+F, [2020-01-23T20:46:14.650662 #13919] FATAL -- : [ce0d8929-98b3-41fe-840c-fa496e919e49]   
+F, [2020-01-23T20:46:14.650823 #13919] FATAL -- : [ce0d8929-98b3-41fe-840c-fa496e919e49] actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+[ce0d8929-98b3-41fe-840c-fa496e919e49] actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[ce0d8929-98b3-41fe-840c-fa496e919e49] railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+[ce0d8929-98b3-41fe-840c-fa496e919e49] railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+[ce0d8929-98b3-41fe-840c-fa496e919e49] activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+[ce0d8929-98b3-41fe-840c-fa496e919e49] activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+[ce0d8929-98b3-41fe-840c-fa496e919e49] activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+[ce0d8929-98b3-41fe-840c-fa496e919e49] railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+[ce0d8929-98b3-41fe-840c-fa496e919e49] actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[ce0d8929-98b3-41fe-840c-fa496e919e49] actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[ce0d8929-98b3-41fe-840c-fa496e919e49] rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+[ce0d8929-98b3-41fe-840c-fa496e919e49] rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+[ce0d8929-98b3-41fe-840c-fa496e919e49] activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[ce0d8929-98b3-41fe-840c-fa496e919e49] actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+[ce0d8929-98b3-41fe-840c-fa496e919e49] rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+[ce0d8929-98b3-41fe-840c-fa496e919e49] railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+[ce0d8929-98b3-41fe-840c-fa496e919e49] puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+[ce0d8929-98b3-41fe-840c-fa496e919e49] puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+[ce0d8929-98b3-41fe-840c-fa496e919e49] puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+[ce0d8929-98b3-41fe-840c-fa496e919e49] puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+[ce0d8929-98b3-41fe-840c-fa496e919e49] puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+I, [2020-01-23T20:47:44.712089 #14060]  INFO -- : [1b740ff2-372b-49a6-8fe2-c38df479409a] Started GET "/" for 10.0.2.2 at 2020-01-23 20:47:44 +0000
+I, [2020-01-23T20:47:44.712976 #14060]  INFO -- : [1b740ff2-372b-49a6-8fe2-c38df479409a] Processing by WelcomeController#index as HTML
+I, [2020-01-23T20:47:44.742690 #14060]  INFO -- : [1b740ff2-372b-49a6-8fe2-c38df479409a]   Rendering welcome/index.html.erb within layouts/application
+I, [2020-01-23T20:47:44.865730 #14060]  INFO -- : [1b740ff2-372b-49a6-8fe2-c38df479409a]   Rendered welcome/_menu.html.erb (0.5ms)
+I, [2020-01-23T20:47:44.874821 #14060]  INFO -- : [1b740ff2-372b-49a6-8fe2-c38df479409a]   Rendered welcome/index.html.erb within layouts/application (132.0ms)
+I, [2020-01-23T20:47:44.875139 #14060]  INFO -- : [1b740ff2-372b-49a6-8fe2-c38df479409a] Completed 500 Internal Server Error in 162ms
+F, [2020-01-23T20:47:44.876309 #14060] FATAL -- : [1b740ff2-372b-49a6-8fe2-c38df479409a]   
+F, [2020-01-23T20:47:44.876491 #14060] FATAL -- : [1b740ff2-372b-49a6-8fe2-c38df479409a] ActionView::Template::Error (uninitialized constant ApplicationHelper::Rail
+Did you mean?  Rails):
+F, [2020-01-23T20:47:44.876774 #14060] FATAL -- : [1b740ff2-372b-49a6-8fe2-c38df479409a]      9:     
+[1b740ff2-372b-49a6-8fe2-c38df479409a]     10: <%= render "menu" %>
+[1b740ff2-372b-49a6-8fe2-c38df479409a]     11: <p>
+[1b740ff2-372b-49a6-8fe2-c38df479409a]     12:     Você está em ambiente de <strong><%= ambiente_rails %></strong>
+[1b740ff2-372b-49a6-8fe2-c38df479409a]     13: </p>
+[1b740ff2-372b-49a6-8fe2-c38df479409a]     14: <p> 
+[1b740ff2-372b-49a6-8fe2-c38df479409a]     15:     Eu sou uma variável de instância/sessão <strong><%= @meu_nome %>
+F, [2020-01-23T20:47:44.876979 #14060] FATAL -- : [1b740ff2-372b-49a6-8fe2-c38df479409a]   
+F, [2020-01-23T20:47:44.877183 #14060] FATAL -- : [1b740ff2-372b-49a6-8fe2-c38df479409a] app/helpers/application_helper.rb:19:in `ambiente_rails'
+[1b740ff2-372b-49a6-8fe2-c38df479409a] app/views/welcome/index.html.erb:12:in `_app_views_welcome_index_html_erb__1951400470989647465_47344654921220'
+I, [2020-01-23T20:48:31.117596 #14076]  INFO -- : [4536cf9b-ce9a-4aae-a6dc-3554b9801b08] Started GET "/" for 10.0.2.2 at 2020-01-23 20:48:31 +0000
+I, [2020-01-23T20:48:31.118469 #14076]  INFO -- : [4536cf9b-ce9a-4aae-a6dc-3554b9801b08] Processing by WelcomeController#index as HTML
+I, [2020-01-23T20:48:31.138139 #14076]  INFO -- : [4536cf9b-ce9a-4aae-a6dc-3554b9801b08]   Rendering welcome/index.html.erb within layouts/application
+I, [2020-01-23T20:48:31.241350 #14076]  INFO -- : [4536cf9b-ce9a-4aae-a6dc-3554b9801b08]   Rendered welcome/_menu.html.erb (0.5ms)
+I, [2020-01-23T20:48:31.249260 #14076]  INFO -- : [4536cf9b-ce9a-4aae-a6dc-3554b9801b08]   Rendered welcome/index.html.erb within layouts/application (111.0ms)
+I, [2020-01-23T20:48:31.249485 #14076]  INFO -- : [4536cf9b-ce9a-4aae-a6dc-3554b9801b08] Completed 500 Internal Server Error in 131ms
+F, [2020-01-23T20:48:31.250477 #14076] FATAL -- : [4536cf9b-ce9a-4aae-a6dc-3554b9801b08]   
+F, [2020-01-23T20:48:31.250603 #14076] FATAL -- : [4536cf9b-ce9a-4aae-a6dc-3554b9801b08] ActionView::Template::Error (uninitialized constant ApplicationHelper::Rail
+Did you mean?  Rails):
+F, [2020-01-23T20:48:31.250760 #14076] FATAL -- : [4536cf9b-ce9a-4aae-a6dc-3554b9801b08]      9:     
+[4536cf9b-ce9a-4aae-a6dc-3554b9801b08]     10: <%= render "menu" %>
+[4536cf9b-ce9a-4aae-a6dc-3554b9801b08]     11: <p>
+[4536cf9b-ce9a-4aae-a6dc-3554b9801b08]     12:     Você está em ambiente de <strong><%= ambiente_rails %></strong>
+[4536cf9b-ce9a-4aae-a6dc-3554b9801b08]     13: </p>
+[4536cf9b-ce9a-4aae-a6dc-3554b9801b08]     14: <p> 
+[4536cf9b-ce9a-4aae-a6dc-3554b9801b08]     15:     Eu sou uma variável de instância/sessão <strong><%= @meu_nome %>
+F, [2020-01-23T20:48:31.250842 #14076] FATAL -- : [4536cf9b-ce9a-4aae-a6dc-3554b9801b08]   
+F, [2020-01-23T20:48:31.250952 #14076] FATAL -- : [4536cf9b-ce9a-4aae-a6dc-3554b9801b08] app/helpers/application_helper.rb:19:in `ambiente_rails'
+[4536cf9b-ce9a-4aae-a6dc-3554b9801b08] app/views/welcome/index.html.erb:12:in `_app_views_welcome_index_html_erb__3899240809666670765_47053802573220'
+I, [2020-01-23T20:48:32.432604 #14076]  INFO -- : [8f60430b-39cd-46d9-bd15-16dc52d4d5e9] Started GET "/" for 10.0.2.2 at 2020-01-23 20:48:32 +0000
+I, [2020-01-23T20:48:32.433414 #14076]  INFO -- : [8f60430b-39cd-46d9-bd15-16dc52d4d5e9] Processing by WelcomeController#index as HTML
+I, [2020-01-23T20:48:32.435141 #14076]  INFO -- : [8f60430b-39cd-46d9-bd15-16dc52d4d5e9]   Rendering welcome/index.html.erb within layouts/application
+I, [2020-01-23T20:48:32.435878 #14076]  INFO -- : [8f60430b-39cd-46d9-bd15-16dc52d4d5e9]   Rendered welcome/_menu.html.erb (0.1ms)
+I, [2020-01-23T20:48:32.444467 #14076]  INFO -- : [8f60430b-39cd-46d9-bd15-16dc52d4d5e9]   Rendered welcome/index.html.erb within layouts/application (9.2ms)
+I, [2020-01-23T20:48:32.444628 #14076]  INFO -- : [8f60430b-39cd-46d9-bd15-16dc52d4d5e9] Completed 500 Internal Server Error in 11ms
+F, [2020-01-23T20:48:32.445635 #14076] FATAL -- : [8f60430b-39cd-46d9-bd15-16dc52d4d5e9]   
+F, [2020-01-23T20:48:32.445728 #14076] FATAL -- : [8f60430b-39cd-46d9-bd15-16dc52d4d5e9] ActionView::Template::Error (uninitialized constant ApplicationHelper::Rail
+Did you mean?  Rails):
+F, [2020-01-23T20:48:32.445913 #14076] FATAL -- : [8f60430b-39cd-46d9-bd15-16dc52d4d5e9]      9:     
+[8f60430b-39cd-46d9-bd15-16dc52d4d5e9]     10: <%= render "menu" %>
+[8f60430b-39cd-46d9-bd15-16dc52d4d5e9]     11: <p>
+[8f60430b-39cd-46d9-bd15-16dc52d4d5e9]     12:     Você está em ambiente de <strong><%= ambiente_rails %></strong>
+[8f60430b-39cd-46d9-bd15-16dc52d4d5e9]     13: </p>
+[8f60430b-39cd-46d9-bd15-16dc52d4d5e9]     14: <p> 
+[8f60430b-39cd-46d9-bd15-16dc52d4d5e9]     15:     Eu sou uma variável de instância/sessão <strong><%= @meu_nome %>
+F, [2020-01-23T20:48:32.445995 #14076] FATAL -- : [8f60430b-39cd-46d9-bd15-16dc52d4d5e9]   
+F, [2020-01-23T20:48:32.446086 #14076] FATAL -- : [8f60430b-39cd-46d9-bd15-16dc52d4d5e9] app/helpers/application_helper.rb:19:in `ambiente_rails'
+[8f60430b-39cd-46d9-bd15-16dc52d4d5e9] app/views/welcome/index.html.erb:12:in `_app_views_welcome_index_html_erb__3899240809666670765_47053802573220'
+I, [2020-01-23T20:49:04.461552 #14091]  INFO -- : [c87ab89b-17f2-4a14-954e-10f02a284cbe] Started GET "/" for 10.0.2.2 at 2020-01-23 20:49:04 +0000
+I, [2020-01-23T20:49:04.462295 #14091]  INFO -- : [c87ab89b-17f2-4a14-954e-10f02a284cbe] Processing by WelcomeController#index as HTML
+I, [2020-01-23T20:49:04.483055 #14091]  INFO -- : [c87ab89b-17f2-4a14-954e-10f02a284cbe]   Rendering welcome/index.html.erb within layouts/application
+I, [2020-01-23T20:49:04.594048 #14091]  INFO -- : [c87ab89b-17f2-4a14-954e-10f02a284cbe]   Rendered welcome/_menu.html.erb (0.5ms)
+I, [2020-01-23T20:49:04.602154 #14091]  INFO -- : [c87ab89b-17f2-4a14-954e-10f02a284cbe]   Rendered welcome/index.html.erb within layouts/application (118.9ms)
+I, [2020-01-23T20:49:04.602361 #14091]  INFO -- : [c87ab89b-17f2-4a14-954e-10f02a284cbe] Completed 500 Internal Server Error in 140ms
+F, [2020-01-23T20:49:04.603453 #14091] FATAL -- : [c87ab89b-17f2-4a14-954e-10f02a284cbe]   
+F, [2020-01-23T20:49:04.603575 #14091] FATAL -- : [c87ab89b-17f2-4a14-954e-10f02a284cbe] ActionView::Template::Error (uninitialized constant ApplicationHelper::Rail
+Did you mean?  Rails):
+F, [2020-01-23T20:49:04.603762 #14091] FATAL -- : [c87ab89b-17f2-4a14-954e-10f02a284cbe]      9:     
+[c87ab89b-17f2-4a14-954e-10f02a284cbe]     10: <%= render "menu" %>
+[c87ab89b-17f2-4a14-954e-10f02a284cbe]     11: <p>
+[c87ab89b-17f2-4a14-954e-10f02a284cbe]     12:     Você está em ambiente de <strong><%= ambiente_rails %></strong>
+[c87ab89b-17f2-4a14-954e-10f02a284cbe]     13: </p>
+[c87ab89b-17f2-4a14-954e-10f02a284cbe]     14: <p> 
+[c87ab89b-17f2-4a14-954e-10f02a284cbe]     15:     Eu sou uma variável de instância/sessão <strong><%= @meu_nome %>
+F, [2020-01-23T20:49:04.603879 #14091] FATAL -- : [c87ab89b-17f2-4a14-954e-10f02a284cbe]   
+F, [2020-01-23T20:49:04.603970 #14091] FATAL -- : [c87ab89b-17f2-4a14-954e-10f02a284cbe] app/helpers/application_helper.rb:19:in `ambiente_rails'
+[c87ab89b-17f2-4a14-954e-10f02a284cbe] app/views/welcome/index.html.erb:12:in `_app_views_welcome_index_html_erb___565003299608567674_47026598929600'
+I, [2020-01-23T20:49:05.402218 #14091]  INFO -- : [75b79725-a780-4794-90d5-581c39820583] Started GET "/" for 10.0.2.2 at 2020-01-23 20:49:05 +0000
+I, [2020-01-23T20:49:05.402952 #14091]  INFO -- : [75b79725-a780-4794-90d5-581c39820583] Processing by WelcomeController#index as HTML
+I, [2020-01-23T20:49:05.404204 #14091]  INFO -- : [75b79725-a780-4794-90d5-581c39820583]   Rendering welcome/index.html.erb within layouts/application
+I, [2020-01-23T20:49:05.404921 #14091]  INFO -- : [75b79725-a780-4794-90d5-581c39820583]   Rendered welcome/_menu.html.erb (0.1ms)
+I, [2020-01-23T20:49:05.414626 #14091]  INFO -- : [75b79725-a780-4794-90d5-581c39820583]   Rendered welcome/index.html.erb within layouts/application (10.3ms)
+I, [2020-01-23T20:49:05.414835 #14091]  INFO -- : [75b79725-a780-4794-90d5-581c39820583] Completed 500 Internal Server Error in 12ms
+F, [2020-01-23T20:49:05.415954 #14091] FATAL -- : [75b79725-a780-4794-90d5-581c39820583]   
+F, [2020-01-23T20:49:05.416117 #14091] FATAL -- : [75b79725-a780-4794-90d5-581c39820583] ActionView::Template::Error (uninitialized constant ApplicationHelper::Rail
+Did you mean?  Rails):
+F, [2020-01-23T20:49:05.416363 #14091] FATAL -- : [75b79725-a780-4794-90d5-581c39820583]      9:     
+[75b79725-a780-4794-90d5-581c39820583]     10: <%= render "menu" %>
+[75b79725-a780-4794-90d5-581c39820583]     11: <p>
+[75b79725-a780-4794-90d5-581c39820583]     12:     Você está em ambiente de <strong><%= ambiente_rails %></strong>
+[75b79725-a780-4794-90d5-581c39820583]     13: </p>
+[75b79725-a780-4794-90d5-581c39820583]     14: <p> 
+[75b79725-a780-4794-90d5-581c39820583]     15:     Eu sou uma variável de instância/sessão <strong><%= @meu_nome %>
+F, [2020-01-23T20:49:05.416517 #14091] FATAL -- : [75b79725-a780-4794-90d5-581c39820583]   
+F, [2020-01-23T20:49:05.416677 #14091] FATAL -- : [75b79725-a780-4794-90d5-581c39820583] app/helpers/application_helper.rb:19:in `ambiente_rails'
+[75b79725-a780-4794-90d5-581c39820583] app/views/welcome/index.html.erb:12:in `_app_views_welcome_index_html_erb___565003299608567674_47026598929600'
